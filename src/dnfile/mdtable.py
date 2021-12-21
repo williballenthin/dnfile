@@ -166,8 +166,8 @@ class TypeDefRow(MDTableRow):
     TypeName: str
     TypeNamespace: str
     Extends: codedindex.TypeDefOrRef
-    FieldList: List
-    MethodList: List
+    FieldList: List[MDTableIndex["FieldRow"]]
+    MethodList: List[MDTableIndex["MethodDefRow"]]
 
     _struct_class = TypeDefRowStruct
 
